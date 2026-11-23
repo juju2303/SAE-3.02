@@ -92,6 +92,7 @@ python -m pip install --upgrade pip
 Installez ensuite les bibliothèques nécessaires au projet :
 
 ```bash
+cd SAE-3.02/
 python -m pip install -r requirements.txt
 ```
 
