@@ -1,0 +1,10 @@
+
+# Dépendances Python du projet SAE 3.02
+# Installation : python3 -m pip install -r requirements.txt
+
+# Interface graphique PyQt6
+PyQt6==6.9.1
+
+# Modules inclus directement dans Python :
+# socket, json, threading, sqlite3,
+# datetime, pathlib et sys
