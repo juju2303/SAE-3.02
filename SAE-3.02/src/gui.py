@@ -3,7 +3,7 @@ from PyQt6.QtGui import (QBrush,QPen,QFont)
 from PyQt6.QtWidgets import (QMainWindow,QWidget,QVBoxLayout,QHBoxLayout,QPushButton,QLabel,QGraphicsScene,QGraphicsView)
 from simulation import Simulation
 from database import Database
-
+from network import send_message
 
 class NetworkThread(QThread):
     result = pyqtSignal(object)
