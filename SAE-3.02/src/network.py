@@ -8,7 +8,7 @@ class Server:
         self.running = True
         self.socket = socket.socket(socket.AF_INET,socket.SOCK_STREAM)
         self.socket.setsockopt(socket.SOL_SOCKET,socket.SO_REUSEADDR,1)
-        self.socket.bind(("127.0.0.1", 5000))
+        self.socket.bind(("0.0.0.0", 5000))
         self.socket.listen(5)
 
     def start(self):
@@ -51,7 +51,7 @@ class Server:
 
 def send_message(message):
     try:
-        sock = socket.create_connection(("127.0.0.1", 5000),timeout=2)
+        sock = socket.create_connection(("10.0.2.15", 5000),timeout=2)
         sock.send(json.dumps(message).encode())
         response = sock.recv(1024)
         sock.close()
