@@ -3,7 +3,6 @@ from PyQt6.QtGui import (QBrush,QPen,QFont)
 from PyQt6.QtWidgets import (QMainWindow,QWidget,QVBoxLayout,QHBoxLayout,QPushButton,QLabel,QGraphicsScene,QGraphicsView)
 from simulation import Simulation
 from database import Database
-from network import Server, send_message
 
 
 class NetworkThread(QThread):
@@ -24,8 +23,6 @@ class MainWindow(QMainWindow):
         self.database = Database()
         self.simulation = Simulation()
         self.simulation.updated.connect(self.refresh)
-        self.server = Server()
-        self.server.start()
         self.network_thread = None
         central = QWidget()
         self.setCentralWidget(central)
