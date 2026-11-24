@@ -51,7 +51,7 @@ class Server:
 
 def send_message(message):
     try:
-        sock = socket.create_connection(("10.0.2.15", 5000),timeout=2)
+        sock = socket.create_connection(("192.168.8.10", 5000),timeout=2)
         sock.send(json.dumps(message).encode())
         response = sock.recv(1024)
         sock.close()
